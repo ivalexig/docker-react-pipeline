@@ -15,8 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          This text was added as a feature pipeline example
+          Learn React
         </a>
+        <p>This text was added as a feature pipeline example</p>
       </header>
     </div>
   );
