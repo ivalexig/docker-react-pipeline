@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true ivalexig/docker-react-pipeline npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-southeast-2'
+  app: 'docker-react-pipeline'
+  env: 'Dockerreactpipeline-env'
+  bucket_name: 'elasticbeanstalk-ap-southeast-2-989835879183'
+  bucket_path: 'docker-react-pipeline'
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
